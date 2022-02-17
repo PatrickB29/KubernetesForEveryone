@@ -36,7 +36,8 @@ The actions which follow will now only execute within this namespace. Deployment
 ```bash
 kubectl config set-context $(kubectl config current-context) --namespace=insert-name
 # Validate it, ==grep does not work in powershell==
-kubectl config view | grep namespace:
+kubectl config view | grep namespace: ==linux
+kubectl config view  ==overview in powershell, 23rd line is namespace==
 ```
  
 &nbsp;
