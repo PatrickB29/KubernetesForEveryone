@@ -6,7 +6,7 @@ Open powershell as administrator (run as) \
 ```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 ```
-==Reboot your system==
+==Reboot your system== or ==close powershell==
 
 ## Install Minikube
 Open powershell again as administrator
@@ -31,6 +31,7 @@ Add-DnsClientNrptRule -Namespace ".test" -NameServers "$(minikube ip)"
 ```
 
 ## Test ingress: 
+==alias kubectl== function kubectl { minikube kubectl -- $args }  ==
 ```powershell 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/minikube/master/deploy/addons/ingress-dns/example/example.yaml
 ```
